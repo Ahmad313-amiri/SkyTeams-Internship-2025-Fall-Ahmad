@@ -17,9 +17,6 @@ int findLargestNum(List<int> nums){
   for(int i=0; i<nums.length; i++){
     if(largest<nums[i]){
       largest = nums[i];
-
-      
-
     }
   }
   return largest;
