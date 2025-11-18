@@ -11,39 +11,41 @@ Input:
 Output:
 February, 28 or 29 days
 */
+
 void main() {
-  describeMonth(-12);
+  print(describeMonth(-12));
+  print(describeMonth(2));
+  print(describeMonth(7));
 }
 
-describeMonth(int monthNumber) {
-  if (monthNumber >= 1 && monthNumber <= 12) {
-    switch (monthNumber) {
-      case 1:
-        print('Jinuary , 28 or 29 days');
-      case 2:
-        print('Febrwary, 28 or 29 days');
-      case 3:
-        print('March, 28 or 29 days');
-      case 4:
-        print('April, 28 or 29 days');
-      case 5:
-        print('May, 28 or 29 days');
-      case 6:
-        print('Jon, 28 or 29 days');
-      case 7:
-        print('July, 28 or 29 days');
-      case 8:
-        print('Aquest, 28 or 29 days');
-      case 9:
-        print('Septamber, 28 or 29 days');
-      case 10:
-        print('Octomber, 28 or 29 days');
-      case 11:
-        print('Nowember, 28 or 29 days');
-      case 12:
-        print('December, 28 or 29 days');
-    }
-  } else {
-    print('Please Enter valide month number 1-12 !');
+String describeMonth(int monthNumber) {
+
+  switch (monthNumber) {
+    case 1:
+      return 'January, 31 days';
+    case 2:
+      return 'February, 28 or 29 days';
+    case 3:
+      return 'March, 31 days';
+    case 4:
+      return 'April, 30 days';
+    case 5:
+      return 'May, 31 days';
+    case 6:
+      return 'June, 30 days';
+    case 7:
+      return 'July, 31 days';
+    case 8:
+      return 'August, 31 days';
+    case 9:
+      return 'September, 30 days';
+    case 10:
+      return 'October, 31 days';
+    case 11:
+      return 'November, 30 days';
+    case 12:
+      return 'December, 31 days';
+    default:
+      return 'Invalid month number. Please enter a number between 1 and 12.';
   }
 }
