@@ -11,7 +11,7 @@ void main() {
         time: 2,
         type: InterestType.simple,
       );
-      expect(result, 100); // 1000*5*2/100
+      expect(result, 100);
     });
 
     test('Compound Interest Positive Values', () {
@@ -21,7 +21,7 @@ void main() {
         time: 2,
         type: InterestType.compound,
       );
-      expect(result, closeTo(102.5, 0.01)); // تقریبی چون ممکنه double دقت داشته باشد
+      expect(result, closeTo(102.5, 0.01));
     });
 
     test('Zero Principal', () {

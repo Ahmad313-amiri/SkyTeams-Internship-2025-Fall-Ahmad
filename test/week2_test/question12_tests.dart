@@ -7,7 +7,7 @@ void main() {
 
     test('Red color → Stop', () {
       expect(trafficLighSystem('Red'), 'Stop');
-      expect(trafficLighSystem('red'), 'Stop'); // تست بدون حساسیت به حروف
+      expect(trafficLighSystem('red'), 'Stop');
     });
 
     test('Yellow color → Ready', () {
