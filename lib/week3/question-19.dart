@@ -14,23 +14,22 @@ Output:
 *********
 */
 
-
-void main (){
-
- pyramidPattern(5);
+void main() {
+  var result = pyramidPattern(5);
+  for (var line in result) {
+    print(line);
+  }
 }
 
 
+List<String> pyramidPattern(int number) {
+  List<String> pattern = [];
 
-void pyramidPattern(int number){
-  for(int i = 1; i<=number; i++){
-    String space = " "*(number -i);
-    int  stars =  2* i-1;
-
-    print( space + "*"*stars);
-
+  for (int i = 1; i <= number; i++) {
+    String space = " " * (number - i);
+    int stars = 2 * i - 1;
+    pattern.add(space + "*" * stars);
   }
 
-
-
+  return pattern;
 }

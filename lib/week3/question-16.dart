@@ -11,32 +11,18 @@ Output:
 0, 1, 1, 2, 3, 5, 8
 
 */
-
-
-void main(){
-
-  // var result =  calculateFibonacci(3);
-  print(calculateFibonacci(3));
-
-
+void main() {
+  print(calculateFibonacci(5));
 }
 
+List<int> calculateFibonacci(int n) {
+  if (n <= 0) return [];
+  if (n == 1) return [0];
+  if (n == 2) return [0, 1];
 
- List calculateFibonacci(int number){
-List<int> fibSeq = [];
-  int a =0;
-  int b = 1;
-  int next ;
-
-  fibSeq.add(a); fibSeq.add(b);
-
-   for(int i= 2; i<number; i++){
-     next = a+b;
-     a = b;
-     b = next;
-     // fibSeq.add(a);
-     fibSeq.add(next);
-
-   }
-return fibSeq;
+  List<int> fibSeq = [0, 1];
+  for (int i = 2; i < n; i++) {
+    fibSeq.add(fibSeq[i - 1] + fibSeq[i - 2]);
+  }
+  return fibSeq;
 }

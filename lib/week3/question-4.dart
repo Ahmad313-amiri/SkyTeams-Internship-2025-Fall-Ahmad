@@ -12,6 +12,12 @@ Output:
 */
 
 
+void main(){
+  var result = findFactors(4);
+  print(result);
+
+}
+
 List<int> findFactors(int number) {
   List<int> factors = [];
 
@@ -25,6 +31,3 @@ List<int> findFactors(int number) {
 }
   
   
-  
-  
-}

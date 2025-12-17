@@ -13,20 +13,22 @@ Output:
  ****
 */
 
-void main(){
 
-  rightAlignPatternPrinting(4);
-
-
+void main() {
+  var result = rightAlignPatternPrinting(4);
+  for (var line in result) {
+    print(line);
+  }
 }
 
-void rightAlignPatternPrinting(int number){
+List<String> rightAlignPatternPrinting(int number) {
+  List<String> pattern = [];
 
-  for(int i=1; i<= number; i++){
-   String space =" "*(number-i);
-   String stars = "*" *i;
-   print(space + stars);
-
+  for (int i = 1; i <= number; i++) {
+    String space = " " * (number - i);
+    String stars = "*" * i;
+    pattern.add(space + stars);
   }
 
+  return pattern;
 }

@@ -18,6 +18,22 @@ BMI = 22.86 (Normal weight)
 
 */
 
+String calculateBmi(double weight, double height) {
+  if (height > 3) height = height / 100;
 
+  double bmi = weight / (height * height);
+  bmi = ((bmi * 100).round()) / 100;
+  String category;
 
+  if (bmi < 18.5) {
+    category = '(UnderWeight)';
+  } else if (bmi < 25) {
+    category = '(NormalWeight)';
+  } else if (bmi < 30) {
+    category = '(OverWeight)';
+  } else {
+    category = '(Obse)';
+  }
 
+  return 'BMI = $bmi $category';
+}

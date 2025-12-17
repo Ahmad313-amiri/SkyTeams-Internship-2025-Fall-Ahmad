@@ -18,12 +18,6 @@ void main(){
   print(result);
 }
 
-
-
-
-
-
-
 powerOfNumber(int base , int exponent){
  int  result = 1;
   if(base ==0){

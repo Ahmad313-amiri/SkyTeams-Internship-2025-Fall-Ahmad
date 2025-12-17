@@ -14,16 +14,22 @@ Output:
 
 
 */
-
-void main(){
-
-
- patternPrinting(4);
-}
-
-patternPrinting(int number){
-
-  for(int i=0; i<= number; i++){
-    print("*" * i);
+void main() {
+  var result = patternPrinting(4);
+  for (var line in result) {
+    print(line);
   }
 }
+
+List<String> patternPrinting(int number) {
+  List<String> pattern = [];
+
+  if (number <= 0) return pattern;
+
+  for (int i = 1; i <= number; i++) {
+    pattern.add("*" * i);
+  }
+
+  return pattern;
+}
+
